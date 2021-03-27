@@ -1,0 +1,47 @@
+$purple:#8A82CC;
+$pink:#FFA782;
+$yellow:#F5D005;
+$blue:#559AC8;
+
+.bg-purple{
+    background:$purple;
+}
+.bg-pink{
+    background:$pink;
+}
+.bg-yellow{
+    background:$yellow;
+}
+.bg-blue{
+    background:$blue;
+}
+
+.text-purple{
+    color:$purple;
+}
+.text-pink{
+    color:$pink;
+}
+.text-yellow{
+    color:$yellow;
+}
+.text-blue{
+    color:$blue;
+}
+
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container{
+    max-width:1110px;
+    margin: 0 auto;
+}
