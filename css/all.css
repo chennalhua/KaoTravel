@@ -307,6 +307,10 @@ header .hot-box .hot-list button:hover {
   padding: 5px 10px;
 }
 
+.main .pagination a:hover {
+  color: #559AC8;
+}
+
 .active {
   background: #559AC8;
   color: white;

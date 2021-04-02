@@ -176,15 +176,15 @@ function pagination(locationDataArry , nowPage){
 function pageBtn(page){
     let str= '';
     let total = page.pageTotal;
-    let currentPage = parseInt(page.currentPage);
+    let currentPage = page.currentPage;
     if(page.hasPage){
         str += `<li class="prev"><a href="#" data-page="${Number(page.currentPage) - 1}">Prev</a></li>`;
     }
-    for(let i=1;i<=total;i++){
-        if(i === currentPage){
+    for(let i=1; i<=total; i++){
+        if(i == currentPage){
             str += `<li><a href="#" class="active" data-page="${i}">${i}</a></li>`;
         }
-        else if(Math.ceil(i/8) === Math.ceil(currentPage/8)){
+        else if(Math.ceil(i/6) == Math.ceil(currentPage/6)){
             str += `<li><a href="#" data-page="${i}">${i}</a></li>`;
         }
     }
