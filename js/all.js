@@ -25,30 +25,32 @@ function init(){
     let str = '';
     locationDataArry.forEach(function(item){
         //景點列表內容
-        let content = `<li class="location-item" >
+        let content = `<li class="mb-4 col-md-6">
+            <div class="location-item h-100">
             <div class="item-header">
-                <div class="img-box">
-                    <img src="${item.Picture1}" alt="${item.Name}">
+            <div class="img-box">
+                <img src="${item.Picture1}" alt="${item.Name}">
+            </div>
+            <div class="item-header-info">
+                <h4 class="location-name">${item.Name}</h4>
+                <p class="m-0">${item.Zone}</p>
+            </div>
+         </div>
+        <ul class="item-body px-3 list-unstyled">
+            <li class="time"><i class="fas fa-clock text-purple"></i>${item.Opentime}</li>
+            <li class="address"><i class="fas fa-map-marker-alt text-yellow"></i>${item.Add}</li>
+            <li class="last-item">
+                <div class="phone">
+                    <i class="fas fa-mobile-alt text-blue"></i>
+                    <a href="tel:+${item.Tel}">${item.Tel}</a>
                 </div>
-                <div class="item-header-info">
-                    <h4 class="location-name">${item.Name}</h4>
-                    <p>${item.Zone}</p>
+                <div class="tag text-warning">
+                    <i class="fas fa-tag text-yellow"></i>
+                    <span>${item.Ticketinfo}</span>
                 </div>
-             </div>
-            <ul class="item-body">
-                <li class="time"><i class="fas fa-clock text-purple"></i>${item.Opentime}</li>
-                <li class="address"><i class="fas fa-map-marker-alt text-yellow"></i>${item.Add}</li>
-                <li class="last-item">
-                    <div class="phone">
-                        <i class="fas fa-mobile-alt text-blue"></i>
-                        <a href="tel:+${item.Tel}">${item.Tel}</a>
-                    </div>
-                    <div class="tag">
-                        <i class="fas fa-tag text-yellow"></i>
-                        <span>${item.Ticketinfo}</span>
-                    </div>
-                </li>
-            </ul>
+            </li>
+        </ul>
+            </div>
         </li>`;
     str += content;
     })
@@ -81,30 +83,32 @@ function OptionChangeCardItem(e){
     let strFilter = '';
     locationDataArry.forEach(function(item){
         if(e.target.value == item.Zone){
-            let content = `<li class="location-item" >
+            let content = `<li class="mb-4 col-md-6">
+            <div class="location-item h-100">
             <div class="item-header">
-                <div class="img-box">
-                    <img src="${item.Picture1}" alt="${item.Name}">
+            <div class="img-box">
+                <img src="${item.Picture1}" alt="${item.Name}">
+            </div>
+            <div class="item-header-info">
+                <h4 class="location-name">${item.Name}</h4>
+                <p class="m-0">${item.Zone}</p>
+            </div>
+         </div>
+        <ul class="item-body px-3 list-unstyled">
+            <li class="time"><i class="fas fa-clock text-purple"></i>${item.Opentime}</li>
+            <li class="address"><i class="fas fa-map-marker-alt text-yellow"></i>${item.Add}</li>
+            <li class="last-item">
+                <div class="phone">
+                    <i class="fas fa-mobile-alt text-blue"></i>
+                    <a href="tel:+${item.Tel}">${item.Tel}</a>
                 </div>
-                <div class="item-header-info">
-                    <h4 class="location-name">${item.Name}</h4>
-                    <p>${item.Zone}</p>
+                <div class="tag text-warning">
+                    <i class="fas fa-tag text-yellow"></i>
+                    <span>${item.Ticketinfo}</span>
                 </div>
-             </div>
-            <ul class="item-body">
-                <li class="time"><i class="fas fa-clock text-purple"></i>${item.Opentime}</li>
-                <li class="address"><i class="fas fa-map-marker-alt text-yellow"></i>${item.Add}</li>
-                <li class="last-item">
-                    <div class="phone">
-                        <i class="fas fa-mobile-alt text-blue"></i>
-                        <a href="tel:+${item.Tel}">${item.Tel}</a>
-                    </div>
-                    <div class="tag">
-                        <i class="fas fa-tag text-yellow"></i>
-                        <span>${item.Ticketinfo}</span>
-                    </div>
-                </li>
-            </ul>
+            </li>
+        </ul>
+            </div>
         </li>`;
             strFilter += content;
             locationList.innerHTML = strFilter;

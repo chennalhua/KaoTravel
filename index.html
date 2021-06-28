@@ -5,31 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高雄旅遊資訊</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
     <!-- header -->
     <header>
-        <div class="container header-info">
-            <h1>高雄旅遊資訊</h1>
-            <select name="選擇行政區" id="area">
-                <option value="請選擇行政區" disabled selected>--請選擇行政區--</option>
-                <option value="鳳山區">鳳山區</option>
-            </select>
-            <div class="hot-box">
-                <h3>熱門行政區</h3>
-                <ul class="hot-list">
-                    <li class="hot-item">
-                        <button type="button" value="苓雅區" class="bg-purple">苓雅區</button>
+        <div class="container header-info py-3 ">
+            <h1 class="display-4 text-light font-weight-blod text-center mb-4">高雄旅遊資訊</h1>
+            <div class="col-lg-6 mx-auto mb-4">
+                <select name="選擇行政區" id="area" class="form-control">
+                    <option value="請選擇行政區" disabled selected>--請選擇行政區--</option>
+                    <option value="鳳山區">鳳山區</option>
+                </select>
+            </div>
+            <div class="bg-white col-8 mx-auto rounded py-3">
+                <h3 class="h4 text-center mb-3">熱門行政區</h3>
+                <ul class="row list-unstyled text-center hot-list m-0">
+                    <li class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                        <button type="button" value="苓雅區" class="btn btn-primary btn-lg mx-3">苓雅區</button>
                     </li>
-                    <li class="hot-item ">
-                        <button type="button" value="三民區" class="bg-pink">三民區</button>
+                    <li class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                        <button type="button" value="三民區" class="btn btn-info btn-lg mx-3">三民區</button>
                     </li>
-                    <li class="hot-item ">
-                        <button type="button" value="美濃區" class="bg-yellow">美濃區</button>
+                    <li class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                        <button type="button" value="美濃區" class="btn btn-warning btn-lg mx-3">美濃區</button>
                     </li>
-                    <li class="hot-item ">
-                        <button type="button" value="小港區" class="bg-blue">小港區</button>
+                    <li class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                        <button type="button" value="小港區" class="btn btn-success btn-lg mx-3">小港區</button>
                     </li>
                 </ul>
             </div>
@@ -40,13 +44,10 @@
     <!-- main -->
     <section class="main">
         <div class="container">
-            <div class="arrow-box">
-                <hr class="arrow">
-                <i class="fas fa-arrow-circle-down"></i>
-            </div>
+            <div class="text-center mt-4"><i class="fas fa-arrow-circle-down h4 text-primary"></i></div>
             <div class="location-box">
-                <h2 class="location-title">三民區</h2>
-                <ul class="location-list">
+                <h2 class="location-title text-center mb-3"></h2>
+                <ul class="location-list list-unstyled row">
                 </ul>
             </div>
             <!-- <ul class="pagination">
@@ -57,8 +58,8 @@
     <!-- main end -->
 
     <!-- footer -->
-    <footer>
-        <div class="container">
+    <footer class="bg-primary text-center text-light container-fluid"> 
+        <div class="container py-4">
             <p>高雄旅遊網</p>
             <p class="text-yellow">資料來源：高雄市政府</p>
         </div>
@@ -66,7 +67,7 @@
     <!-- footer end -->
     <!-- goTop -->
     <div class="gotop">
-        <a href="#"><i class="fas fa-arrow-up"></i></a>
+        <a href="#" class="btn btn-secondary"><i class="fas fa-arrow-up"></i></a>
     </div>
 
 
